@@ -1,7 +1,7 @@
 apiVersion: radix.equinor.com/v1
 kind: RadixApplication
 metadata:
-  name: myfirstapp
+  name: mysecondapp
 spec:
   environments:
     - name: dev
@@ -15,3 +15,13 @@ spec:
       ports:
        - name: http
          port: 3000
+
+    db:
+    image: mysql
+    ports:
+    - "3306:3306"
+    environment:
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_USER=user
+    - MYSQL_PASSWORD=password
+    - MYSQL_DATABASE=demodb
