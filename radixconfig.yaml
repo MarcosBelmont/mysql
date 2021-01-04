@@ -15,7 +15,7 @@ spec:
       ports:
        - name: http
          port: 3000
-    - db:
+     - name: db
     image: mysql
     ports:
     - "3306:3306"
